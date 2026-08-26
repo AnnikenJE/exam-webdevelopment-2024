@@ -6,12 +6,12 @@ A fullstack web application for managing a merchandise catalogue. Users can brow
 
 ## Features
 
-- **Browse** — home page listing every item in the catalogue as responsive cards
-- **Search** — look up merch by name, with partial and case-insensitive matching
-- **Create** — form for name, price, category, description and product image
-- **Edit** — look up an item by ID, change any field, and optionally replace its image
-- **Delete** — remove an item, with a confirmation step before the request is sent
-- **Image upload** — files are posted as `multipart/form-data` and stored under `wwwroot/images`
+- **Browse:** home page listing every item in the catalogue as responsive cards
+- **Search:** look up merch by name, with partial and case-insensitive matching
+- **Create:** form for name, price, category, description and product image
+- **Edit:** look up an item by ID, change any field, and optionally replace its image
+- **Delete:** remove an item, with a confirmation step before the request is sent
+- **Image upload:** files are posted as `multipart/form-data` and stored under `wwwroot/images`
 - Full CRUD across the stack, with shared state held in a React context so the list stays in sync
 
 ## Tech Stack
@@ -51,7 +51,7 @@ TrumpVerseAPI/                  .NET Web API
   wwwroot/                      Static API documentation page and uploaded images
 ```
 
-Components never call the API directly — every read and write goes through `MerchContext`, which delegates to `MerchService` and returns plain typed objects. The controllers take `TrumpContext` through constructor injection and wrap each action in error handling that maps failures to the matching HTTP status code.
+Components never call the API directly, every read and write goes through `MerchContext`, which delegates to `MerchService` and returns plain typed objects. The controllers take `TrumpContext` through constructor injection and wrap each action in error handling that maps failures to the matching HTTP status code.
 
 **API endpoints**
 
@@ -77,7 +77,7 @@ git clone git@github.com:AnnikenJE/trump-verse.git
 cd trump-verse
 ```
 
-Start the backend first — the frontend expects it on `http://localhost:5290`:
+Start the backend first, the frontend expects it on `http://localhost:5290`:
 
 ```bash
 cd TrumpVerseAPI
@@ -101,7 +101,7 @@ The API base URL is set in `trumpverse/src/services/MerchService.ts` and must be
 
 ## Background
 
-Originally built as the exam project for **Web Development (15 ECTS)** — Kristiania University College, graded **A**.
+Originally built as the exam project for **Web Development (15 ECTS)**, Kristiania University College, graded **A**.
 
 All code is handwritten.
 AI is only used to help write the README and commit messages.
